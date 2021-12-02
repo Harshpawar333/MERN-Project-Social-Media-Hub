@@ -2,26 +2,26 @@ import logo from './logo.svg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 function App() {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [age, setAge] = useState('')
-  const [mobileNumber, setMobileNumber] = useState('')
-  const [password, setPassword] = useState('')
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [age, setAge] = useState('');
+  const [mobileNumber, setMobileNumber] = useState('');
+  const [password, setPassword] = useState('');
 
-  const [firstNameErr, setFirstNameErr] = useState(false)
-  const [lastNameErr, setLastNameErr] = useState(false)
-  const [emailErr, setEmailErr] = useState(false)
-  const [ageErr, setAgeErr] = useState(false)
-  const [mobileNumberErr, setMobileNumberErr] = useState(false)
-  const [passwordErr, setPasswordErr] = useState(false)
+  const [firstNameErr, setFirstNameErr] = useState(false);
+  const [lastNameErr, setLastNameErr] = useState(false);
+  const [emailErr, setEmailErr] = useState(false);
+  const [ageErr, setAgeErr] = useState(false);
+  const [mobileNumberErr, setMobileNumberErr] = useState(false);
+  const [passwordErr, setPasswordErr] = useState(false);
+
   function handleSubmit() {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (firstName === '') {
-      
       setFirstNameErr(true);
     } else {
       setFirstNameErr(false)
@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="app">
       <div className="container customContainer text-left">
-        <h1 className="text-center"> Signup Form</h1>
+        <h1 className="text-center">Signup Form</h1>
         <div class="py-4 pt-0 row">
           <label for="inputPassword" class="col-sm-3 col-form-label">
             First Name

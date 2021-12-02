@@ -19,21 +19,25 @@ password should not be empty
 password => password length should be greater than 8
 email => it should be valid 
 
-if there is error then show respective 
+if there is error then show respective errors .
+if there are no erros then error message should not be shown on signup button click
 
 if there are no error 
 then call API with above data .
 
 data type 
 
-first name string
-last name string   
-email string
-age number
-mobile number number
-password string
+first name => string
+last name => string   
+email  => string
+age => number
+mobile number => number
+password => string
 
 
+for all error messages  => boolean (initially it will be false) 
+(when there is error set it to true otherwise set to false.)
 
-
-functions 
+functions => 
+handleSubmit => it will be called on sign up button click
+handleChange => this functions will add updated input values
