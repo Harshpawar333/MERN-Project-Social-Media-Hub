@@ -1,0 +1,7 @@
+.customContainer {
+max-width: 700px;
+}
+
+.posAbsolute {
+  position: absolute;
+}
