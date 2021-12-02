@@ -21,7 +21,7 @@ function App() {
 
   function handleSubmit() {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    if (firstName === '') { 
+    if (firstName === '') {
       setFirstNameErr(true);
     } else {
       setFirstNameErr(false)
