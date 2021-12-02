@@ -19,7 +19,7 @@ function App() {
   const [mobileNumberErr, setMobileNumberErr] = useState(false)
   const [passwordErr, setPasswordErr] = useState(false)
   function handleSubmit() {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (firstName === '') {
       
       setFirstNameErr(true);
