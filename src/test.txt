@@ -41,6 +41,9 @@ age err number
 mobile number err number
 password err string
 
+if there is error then show respective errors .
+if there are no erros then error message should not be shown on signup button click
+
 
 
 
