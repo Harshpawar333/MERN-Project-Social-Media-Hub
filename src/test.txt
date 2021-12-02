@@ -1,0 +1,39 @@
+UI 
+
+=>
+html css 
+
+scenarios 
+
+all input fields are empty 
+
+validations are happening on signup button click
+
+first name should not be empty
+last name should not be empty
+email should not be empty
+age should not be empty
+mobile number should not be empty
+password should not be empty
+
+password => password length should be greater than 8
+email => it should be valid 
+
+if there is error then show respective 
+
+if there are no error 
+then call API with above data .
+
+data type 
+
+first name string
+last name string   
+email string
+age number
+mobile number number
+password string
+
+
+
+
+functions 
