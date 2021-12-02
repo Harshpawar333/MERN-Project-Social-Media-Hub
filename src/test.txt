@@ -41,3 +41,10 @@ for all error messages  => boolean (initially it will be false)
 functions => 
 handleSubmit => it will be called on sign up button click
 handleChange => this functions will add updated input values
+
+Task-
+Add show password button
+when user click on show password button he should be able to see his password
+button should change to hide password after clicking show password
+when user clicks on hide password user should not be able to see password  
+reset- to reset all data
