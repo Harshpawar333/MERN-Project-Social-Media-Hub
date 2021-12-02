@@ -33,6 +33,14 @@ age number
 mobile number number
 password string
 
+datatype for error
+firstname err string
+last name err string   
+email err string
+age err number
+mobile number err number
+password err string
+
 
 
 
