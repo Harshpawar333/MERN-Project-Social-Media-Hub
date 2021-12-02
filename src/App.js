@@ -19,12 +19,6 @@ function App() {
   const [mobileNumberErr, setMobileNumberErr] = useState(false)
   const [passwordErr, setPasswordErr] = useState(false)
   function handleSubmit() {
-    //     first name should not be empty
-    // last name should not be empty
-    // email should not be empty
-    // age should not be empty
-    // mobile number should not be empty
-    // password should not be empty
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (firstName === '') {
       
