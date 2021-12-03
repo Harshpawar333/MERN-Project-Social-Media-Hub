@@ -1,9 +1,7 @@
 import logo from './logo.svg'
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-
-import { useState } from 'react'
-
 function Login() {
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
@@ -18,7 +16,7 @@ function Login() {
       } else {
         setEmailErr(true)
       }
-      if (password.length < 8) {
+      if (password==='') {
         setPasswordErr(true)
       } else {
         setPasswordErr(false)
@@ -44,10 +42,8 @@ function Login() {
             <div class="col-sm-9">
               <input
                 type="text"
-                minlength="8"
-                required
                 class="form-control"
-                placeholder="Email Addresss or Phone Number"
+                placeholder="Email Address"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />
@@ -62,8 +58,6 @@ function Login() {
             <div class="col-sm-9">
               <input
                 type="password"
-                minlength="8"
-                required
                 class="form-control"
                 placeholder="Password"
                 value={password}

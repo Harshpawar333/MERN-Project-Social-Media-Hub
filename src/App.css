@@ -2,7 +2,7 @@
   margin: auto;
   width: 40%;
   border: 3px solid #1c2016;
-  padding: 100px;
+  padding: 50px;
 }
 
 .posAbsolute {
@@ -22,4 +22,5 @@
 }
 body {
   background-color:rgb(255, 255, 255);
+  padding: 100px;
 }

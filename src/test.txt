@@ -55,7 +55,7 @@ data types
 email  => string
 password => string
 
-password => password length should be greater than 8
+password => password should not be empty
 email => it should be valid 
 
 for all error messages  => boolean (initially it will be false) 
