@@ -1,12 +1,15 @@
 .customContainer {
-max-width: 700px;
+  margin: auto;
+  width: 40%;
+  border: 3px solid #1c2016;
+  padding: 100px;
 }
 
 .posAbsolute {
   position: absolute;
 }
 .container{
-  background-color: #015bff7d;
+  background-color: #fcfcfc;
 
 }
 .col-form-label {
@@ -18,5 +21,5 @@ max-width: 700px;
     font-weight: bold;
 }
 body {
-  background-image: url("https://www.pikpng.com/pngl/b/94-940128_backgrounds-free-download-png-images-for-website-background.png");
+  background-color:rgb(255, 255, 255);
 }

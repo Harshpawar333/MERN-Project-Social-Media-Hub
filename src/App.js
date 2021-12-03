@@ -37,6 +37,13 @@ function App() {
     setMobileNumber('')
     setPassword('')
     setConfirmPassword('')
+    setFirstNameErr(false)
+    setLastNameErr(false)
+    setEmailErr(false)
+    setAgeErr(false)
+    setMobileNumberErr(false)
+    setPasswordErr(false)
+    setConfirmPasswordErr(false)
   }
 
   function handleSubmit() {
