@@ -1,7 +1,26 @@
 .customContainer {
-max-width: 700px;
+  margin: auto;
+  width: 40%;
+  border: 3px solid #1c2016;
+  padding: 50px;
 }
 
 .posAbsolute {
   position: absolute;
+}
+.container{
+  background-color: #fcfcfc;
+
+}
+.col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: black;
+    font-weight: bold;
+}
+.app {
+  background-color:rgb(112, 7, 7);
+  padding: 100px;
 }
