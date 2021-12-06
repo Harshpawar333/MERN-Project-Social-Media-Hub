@@ -1,7 +1,5 @@
-import logo from './logo.svg'
 import { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
+
 function Login() {
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
