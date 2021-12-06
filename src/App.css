@@ -20,7 +20,7 @@
     color: black;
     font-weight: bold;
 }
-body {
-  background-color:rgb(255, 255, 255);
+.app {
+  background-color:rgb(112, 7, 7);
   padding: 100px;
 }
