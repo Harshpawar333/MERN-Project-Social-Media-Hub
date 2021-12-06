@@ -1,10 +1,6 @@
-import logo from './logo.svg'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
-
 import { useState } from 'react'
 
-function App() {
+function Signup() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
@@ -246,4 +242,4 @@ function App() {
   )
 }
 
-export default App
+export default Signup;
