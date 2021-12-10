@@ -9,7 +9,7 @@ const GroceryItems = [
     width: 400,
     price: 28.1,
     rating: 5,
-    link: 'https:www.facebook.com',
+    link: 'https://www.facebook.com/',
   },
   {
     title: 'Twitter',
@@ -20,7 +20,7 @@ const GroceryItems = [
     width: 299,
     price: 29.45,
     rating: 5,
-    link: 'https:www.twitter.com',
+    link: 'https://www.twitter.com/',
   },
   {
     title: 'Instagram',
@@ -31,7 +31,7 @@ const GroceryItems = [
     width: 299,
     price: 18.95,
     rating: 5,
-    link: 'https:www.instagram.com',
+    link: 'https://www.instagram.com/',
   },
   {
     title: 'LinkedIn',
@@ -43,7 +43,7 @@ const GroceryItems = [
     width: 399,
     price: 17.68,
     rating: 5,
-    link: 'https:www.linkedin.com',
+    link: 'https://www.linkedin.com/',
   },
   {
     title: 'WhatsApp',
@@ -54,7 +54,7 @@ const GroceryItems = [
     width: 299,
     price: 17.11,
     rating: 5,
-    link: 'https: web.whatsapp.com',
+    link: 'https://web.whatsapp.com/',
   },
   {
     title: 'Telegram',
@@ -65,7 +65,7 @@ const GroceryItems = [
     width: 675,
     price: 11.14,
     rating: 5,
-    link: 'https:web.telegram.org',
+    link: 'https://web.telegram.org/',
   },
   {
     title: 'Gmail',
@@ -76,7 +76,7 @@ const GroceryItems = [
     width: 299,
     price: 18.19,
     rating: 5,
-    link: 'https:www.gmail.com',
+    link: 'https://www.gmail.com/',
   },
   {
     title: 'Quora',
