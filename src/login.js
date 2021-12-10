@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './App.css'
 
 function Login() {
   const [password, setPassword] = useState('')
@@ -7,35 +8,37 @@ function Login() {
   const [passwordErr, setPasswordErr] = useState(false)
   const [passwordInput, setPasswordInput] = useState('password')
   const [confirmPasswordErr, setConfirmPasswordErr] = useState(false)
-  function handleLogin(){
+  function handleLogin() {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (email.match(mailformat)) {
-        setEmailErr(false)
-      } else {
-        setEmailErr(true)
-      }
-      if (password==='') {
-        setPasswordErr(true)
-      } else {
-        setPasswordErr(false)
-      }
+      setEmailErr(false)
+    } else {
+      setEmailErr(true)
+    }
+    if (password === '') {
+      setPasswordErr(true)
+    } else {
+      setPasswordErr(false)
+    }
+    if (email.match(mailformat) && password !== '') {
+      window.location.href = '/'
+    }
   }
   return (
-    <body>
+    <body id="login">
       <div className="login">
-        <div className="container customContainer text-left">
-          <nav class="navbar navbar-light bg-light">
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                <img
-                  src="https://image.freepik.com/free-vector/golden-elegant-logo-flat-style_52683-17266.jpg"
-                  alt=""
-                  width="90"
-                  height="80"
-                />
-              </a>
-            </div>
-          </nav>
+        <div id="middlebox" className="container customContainer text-left">
+          <div>
+            <a class="navbar-brand" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                alt=""
+                width="90"
+                height="80"
+              />
+            </a>
+          </div>
+
           <div class="py-4 pt-0 row">
             <div class="col-sm-9">
               <input
@@ -46,10 +49,10 @@ function Login() {
                 onChange={(event) => setEmail(event.target.value)}
               />
               {emailErr && (
-                  <span className="text-danger text-left posAbsolute">
-                    Invalid email Address
-                  </span>
-                )}
+                <span className="text-danger text-left posAbsolute">
+                  Invalid email Address
+                </span>
+              )}
             </div>
           </div>
           <div class="py-4 pt-0 row">
@@ -62,9 +65,10 @@ function Login() {
                 onChange={(event) => setPassword(event.target.value)}
               />
               {passwordErr && (
-                  <span className="text-danger text-left posAbsolute">
-                    Invalid Password
-                  </span>)}
+                <span className="text-danger text-left posAbsolute">
+                  Invalid Password
+                </span>
+              )}
             </div>
           </div>
           <button type="button" class="btn btn-primary" onClick={handleLogin}>

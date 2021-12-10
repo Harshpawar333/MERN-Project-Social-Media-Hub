@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './App.css'
 
 function Signup() {
   const [firstName, setFirstName] = useState('')
@@ -16,6 +17,7 @@ function Signup() {
   const [passwordErr, setPasswordErr] = useState(false)
   const [passwordInput, setPasswordInput] = useState('password')
   const [confirmPasswordErr, setConfirmPasswordErr] = useState(false)
+  const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
   function toggleShowPassword() {
     if (passwordInput === 'password') {
@@ -42,7 +44,6 @@ function Signup() {
   }
 
   function handleSubmit() {
-    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if (firstName === '') {
       setFirstNameErr(true)
     } else {
@@ -53,10 +54,10 @@ function Signup() {
     } else {
       setLastNameErr(false)
     }
-    if (email.match(mailformat)) {
-      setEmailErr(false)
-    } else {
+    if (!email.match(mailformat)) {
       setEmailErr(true)
+    } else {
+      setEmailErr(false)
     }
     if (age === '') {
       setAgeErr(true)
@@ -78,7 +79,32 @@ function Signup() {
     } else {
       setConfirmPasswordErr(false)
     }
+    if (
+      firstName !== '' &&
+      lastName !== '' &&
+      email.match(mailformat) &&
+      age !== '' &&
+      mobileNumber.length === 10 &&
+      password.length > 8 &&
+      password === confirmPassword
+    ) {
+      window.location.href = '/login'
+    }
   }
+  function jumptologin() {
+    if (
+      firstName !== '' &&
+      lastName !== '' &&
+      email.match(mailformat) &&
+      age !== '' &&
+      mobileNumber.length === 10 &&
+      password.length > 8 &&
+      password === confirmPassword
+    ) {
+      window.location.href = '/login'
+    }
+  }
+
   return (
     <div className="app">
       <div className="container customContainer text-left">
@@ -225,13 +251,9 @@ function Signup() {
           </div>
 
           <div className="d-flex justify-content-center">
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={handleSubmit}
-            >
+            <a type="button" className="btn btn-primary" onClick={handleSubmit}>
               Signup
-            </button>
+            </a>
             <button type="button" className="btn btn-link" onClick={resetForm}>
               Reset
             </button>
@@ -241,5 +263,4 @@ function Signup() {
     </div>
   )
 }
-
-export default Signup;
+export default Signup

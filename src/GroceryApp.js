@@ -1,8 +1,6 @@
 import './grocery.css'
-import c from './data'
 import ReactStars from 'react-stars'
 import GroceryItems from './data'
-
 function GroceryApp() {
   // TODO => add filters
   // Add Search
@@ -28,8 +26,14 @@ function GroceryApp() {
             </div>
             <h3>{item.title} </h3>
             <p>{item.description} </p>
-            <h4 className="discountLabel">Price:: {item.price} RS</h4>
-            <button className="btn redBtn">ADD TO CART</button>
+            <a
+              class="btn btn-primary"
+              href={item.link}
+              target="_blank"
+              role="button"
+            >
+              Connect
+            </a>
             <div className="d-flex justify-content-center">
               <ReactStars
                 count={item.rating}
@@ -46,7 +50,14 @@ function GroceryApp() {
 
   return (
     <div className="container pizzaAppWrapper clearfix">
-      <h1 className="text-center mainHeading">Grocery Ordering APP</h1>
+      <h1 className="text-center mainHeading">Account Manager</h1>
+      <a class="btn btn-primary" id="loginbutton" href="/login" role="button">
+        log-in
+      </a>
+      <a class="btn btn-link" id="Createbutton" href="/Signup" role="button">
+        Sign-up
+      </a>
+
       <ul className="row clearfix GroceryListing">{renderGroceries()}</ul>
     </div>
   )

@@ -9,7 +9,7 @@
   position: absolute;
 }
 .container{
-  background-color: #fcfcfc;
+  background-color: #f5f5f593;
 
 }
 .col-form-label {
@@ -21,6 +21,17 @@
     font-weight: bold;
 }
 .app {
-  background-color:rgb(112, 7, 7);
+  background-image: url('https://c0.wallpaperflare.com/preview/278/663/591/posting-post-computer-icon.jpg');
   padding: 100px;
 } 
+#middlebox{
+  margin: auto;
+  width: 40%;
+  border: 3px solid #1c2016;
+  padding: 50px;
+  background-color: #f5f5f593;
+}
+#login{
+  background-image: url('https://c0.wallpaperflare.com/preview/278/663/591/posting-post-computer-icon.jpg');
+  padding: 100px;
+}
