@@ -179,3 +179,10 @@ totalPriceWrap .redBtn {
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
+#footerHeader1{
+    background-color: #9a73e2;
+    font-family: math;
+}
+#footer1{
+    background-color: rgb(255, 255, 255);
+}

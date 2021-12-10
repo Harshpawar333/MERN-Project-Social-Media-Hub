@@ -7,11 +7,10 @@ import './index.css'
 import Signup from './Signup'
 import Login from './Login'
 import GroceryApp from './GroceryApp'
-// import Header from "./Header";
+import Header from './Header'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Header /> */}
     <Router>
       <Routes>
         <Route exact path="/" element={<GroceryApp />} />
@@ -19,6 +18,7 @@ ReactDOM.render(
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
+    {<Header />}
   </React.StrictMode>,
   document.getElementById('root'),
 )
