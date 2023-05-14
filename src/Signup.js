@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import axios from "axios";
 
 function Signup() {
   const [firstName, setFirstName] = useState('')
@@ -79,6 +80,14 @@ function Signup() {
     } else {
       setConfirmPasswordErr(false)
     }
+    const formData = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      age: age,
+      mobileNumber: mobileNumber,
+      password: password
+    }
     if (
       firstName !== '' &&
       lastName !== '' &&
@@ -88,7 +97,17 @@ function Signup() {
       password.length > 8 &&
       password === confirmPassword
     ) {
-      window.location.href = '/login'
+      const Signup = () => {
+        axios.post("http://localhost:9002/Signup", formData)
+        .then( res =>  {
+          alert(res.data.message);
+          if (res.data.message === "Successfully registered") {
+            window.location.href = '/login';
+          }
+        })
+      }
+      Signup();
+      // window.location.href = '/login'
     }
   }
   function jumptologin() {

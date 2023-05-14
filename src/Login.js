@@ -1,35 +1,37 @@
 import { useState } from 'react'
+import axios from 'axios'
 import './App.css'
 
 function Login() {
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
-  const [emailErr, setEmailErr] = useState(false)
-  const [passwordErr, setPasswordErr] = useState(false)
-  const [passwordInput, setPasswordInput] = useState('password')
-  const [confirmPasswordErr, setConfirmPasswordErr] = useState(false)
-  function handleLogin() {
-    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    if (email.match(mailformat)) {
-      setEmailErr(false)
-    } else {
-      setEmailErr(true)
-    }
-    if (password === '') {
-      setPasswordErr(true)
-    } else {
-      setPasswordErr(false)
-    }
-    if (email.match(mailformat) && password !== '') {
-      window.location.href = '/'
-    }
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  function handleChangeEmail(event) {
+    setEmail(event.target.value)
   }
+
+  function handleChangePassword(event) {
+    setPassword(event.target.value)
+  }
+
+  function handleLogin() {
+    axios.post("http://localhost:9002/login", { email, password })
+    .then( res =>  {
+      alert(res.data.message);
+      if (res.data.message === "Login successful") {
+        setLoggedIn(true) // set loggedIn flag to true
+        window.location.href = '/loggedin'; // redirect to the loggedin route
+      }
+    })
+  }
+
   return (
     <body id="login">
       <div className="login">
         <div id="middlebox" className="container customContainer text-left">
           <div>
-            <a class="navbar-brand" href="#">
+            <a className="navbar-brand" href="#">
               <img
                 src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                 alt=""
@@ -39,39 +41,33 @@ function Login() {
             </a>
           </div>
 
-          <div class="py-4 pt-0 row">
-            <div class="col-sm-9">
+          <div className="py-4 pt-0 row">
+            <div className="col-sm-9">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Email Address"
                 value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                name="email"
+                onChange={handleChangeEmail}
               />
-              {emailErr && (
-                <span className="text-danger text-left posAbsolute">
-                  Invalid email Address
-                </span>
-              )}
             </div>
           </div>
-          <div class="py-4 pt-0 row">
-            <div class="col-sm-9">
+
+          <div className="py-4 pt-0 row">
+            <div className="col-sm-9">
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 placeholder="Password"
                 value={password}
-                onChange={(event) => setPassword(event.target.value)}
+                name="password"
+                onChange={handleChangePassword}
               />
-              {passwordErr && (
-                <span className="text-danger text-left posAbsolute">
-                  Invalid Password
-                </span>
-              )}
             </div>
           </div>
-          <button type="button" class="btn btn-primary" onClick={handleLogin}>
+
+          <button type="button" className="btn btn-primary" onClick={handleLogin}>
             Log In
           </button>
         </div>
@@ -79,4 +75,5 @@ function Login() {
     </body>
   )
 }
+
 export default Login

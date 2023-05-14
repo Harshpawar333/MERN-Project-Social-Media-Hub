@@ -1,6 +1,8 @@
 import './grocery.css'
 import ReactStars from 'react-stars'
 import GroceryItems from './data'
+/* eslint-disable */
+
 function GroceryApp() {
   // TODO => add filters
   // Add Search
@@ -51,12 +53,7 @@ function GroceryApp() {
   return (
     <div className="container pizzaAppWrapper clearfix">
       <h1 className="text-center mainHeading">Account Manager</h1>
-      <a class="btn btn-primary" id="loginbutton" href="/login" role="button">
-        log-in
-      </a>
-      <a class="btn btn-link" id="Createbutton" href="/Signup" role="button">
-        Sign-up
-      </a>
+     
 
       <ul className="row clearfix GroceryListing">{renderGroceries()}</ul>
     </div>
