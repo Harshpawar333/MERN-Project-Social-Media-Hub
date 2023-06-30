@@ -3,16 +3,8 @@ import ReactStars from 'react-stars'
 import GroceryItems from './data'
 /* eslint-disable */
 
-function GroceryApp() {
-  // TODO => add filters
-  // Add Search
+function LoggedIn() {
 
-  //  title
-  // type
-  // description
-  // fileName for image
-  // price
-  // ratrings=>  show stars based on number of ratings
 
   function renderGroceries() {
     return GroceryItems.slice(0, 10).map(function (item) {
@@ -60,4 +52,4 @@ function GroceryApp() {
   )
 }
 
-export default GroceryApp
+export default LoggedIn

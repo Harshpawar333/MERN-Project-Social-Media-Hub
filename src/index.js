@@ -6,7 +6,7 @@ import './index.css'
 // import './App.css';
 import Signup from './Signup'
 import Login from './Login'
-import GroceryApp from './GroceryApp'
+import LoggedIn from './LoggedIn'
 import Header from './Header'
 import LoginSignup from './loginsignup'
 
@@ -17,7 +17,7 @@ ReactDOM.render(
         <Route exact path="/" element={<LoginSignup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/loggedin" element={<GroceryApp />} />
+        <Route path="/LoggedIn" element={<LoggedIn />} />
       </Routes>
     </Router>
     {<Header />}
