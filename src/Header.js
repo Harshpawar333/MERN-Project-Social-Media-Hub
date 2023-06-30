@@ -24,7 +24,7 @@ function loggedIn() {
       </div>
       <div class="footer-copyright text-center py-3">
         © 2023 Copyright:
-        <h id="copyright"> Harshvardhan D Pawar</h>
+        <h id="copyright"> Harshvardhan Devendra Pawar</h>
       </div>
     </footer>
   )
