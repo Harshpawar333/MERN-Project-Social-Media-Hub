@@ -18,7 +18,8 @@ function Signup() {
   const [passwordErr, setPasswordErr] = useState(false)
   const [passwordInput, setPasswordInput] = useState('password')
   const [confirmPasswordErr, setConfirmPasswordErr] = useState(false)
-  const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+  const mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+
 
   function toggleShowPassword() {
     if (passwordInput === 'password') {
@@ -110,19 +111,19 @@ function Signup() {
       // window.location.href = '/login'
     }
   }
-  function jumptologin() {
-    if (
-      firstName !== '' &&
-      lastName !== '' &&
-      email.match(mailformat) &&
-      age !== '' &&
-      mobileNumber.length === 10 &&
-      password.length > 8 &&
-      password === confirmPassword
-    ) {
-      window.location.href = '/login'
-    }
-  }
+  // function jumptologin() {
+  //   if (
+  //     firstName !== '' &&
+  //     lastName !== '' &&
+  //     email.match(mailformat) &&
+  //     age !== '' &&
+  //     mobileNumber.length === 10 &&
+  //     password.length > 8 &&
+  //     password === confirmPassword
+  //   ) {
+  //     window.location.href = '/login'
+  //   }
+  // }
 
   return (
     <div className="app">
