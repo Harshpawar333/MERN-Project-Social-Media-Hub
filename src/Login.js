@@ -20,8 +20,8 @@ function Login() {
     .then( res =>  {
       alert(res.data.message);
       if (res.data.message === "Login successful") {
-        setLoggedIn(true) // set loggedIn flag to true
-        window.location.href = '/loggedin'; // redirect to the loggedin route
+        
+        window.location.href = '/loggedin'; 
       }
     })
   }
