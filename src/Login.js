@@ -31,7 +31,7 @@ function Login() {
       <div className="login">
         <div id="middlebox" className="container customContainer text-left">
           <div>
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="https://example.com">
               <img
                 src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                 alt=""

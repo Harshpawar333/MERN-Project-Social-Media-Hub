@@ -271,9 +271,9 @@ function Signup() {
           </div>
 
           <div className="d-flex justify-content-center">
-            <a type="button" className="btn btn-primary" onClick={handleSubmit}>
+            <button type="button" className="btn btn-primary" onClick={handleSubmit}>
               Signup
-            </a>
+            </button>
             <button type="button" className="btn btn-link" onClick={resetForm}>
               Reset
             </button>
