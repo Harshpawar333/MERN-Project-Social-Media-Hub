@@ -6,7 +6,7 @@ import './index.css'
 // import './App.css';
 import Signup from './Signup'
 import Login from './Login'
-import LoggedIn from './LoggedIn'
+import LoggedIn from './LoggedIn';
 import Header from './Header'
 import LoginSignup from './loginsignup'
 
