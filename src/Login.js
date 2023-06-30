@@ -21,7 +21,7 @@ function Login() {
       alert(res.data.message);
       if (res.data.message === "Login successful") {
         
-        window.location.href = '/loggedin'; 
+        window.location.href = '/LoggedIn'; 
       }
     })
   }
