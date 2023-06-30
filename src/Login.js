@@ -5,7 +5,7 @@ import './App.css'
 function Login() {
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
-  const [loggedIn, setLoggedIn] = useState(false);
+  // const [loggedIn, setLoggedIn] = useState(false);
 
   function handleChangeEmail(event) {
     setEmail(event.target.value)
