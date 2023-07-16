@@ -6,7 +6,10 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
-mongoose.connect("mongodb://127.0.0.1:27017/mydbforWAD", {
+
+const uri =
+  "mongodb+srv://harsh:account-hub@cluster0.tratldd.mongodb.net/?retryWrites=true&w=majority"; 
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
