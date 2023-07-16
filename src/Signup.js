@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import axios from "axios";
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
   const [firstName, setFirstName] = useState('')
@@ -101,9 +103,11 @@ function Signup() {
       const Signup = () => {
         axios.post("http://localhost:9002/Signup", formData)
         .then( res =>  {
-          alert(res.data.message);
+          toast(res.data.message);
           if (res.data.message === "Successfully registered") {
-            window.location.href = '/login';
+            setTimeout(() => {
+              window.location.href = "/Login";
+            }, 800); 
           }
         })
       }
@@ -129,7 +133,7 @@ function Signup() {
     <div className="app">
       <div className="container customContainer text-left">
         <h1 className="text-center">Sign-up</h1>
-        <form>
+        <form className='formclass'>
           <div class="py-4 pt-0 row">
             <label for="inputPassword" class="col-sm-3 col-form-label">
               First Name

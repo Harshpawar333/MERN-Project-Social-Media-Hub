@@ -35,6 +35,7 @@ function LoggedIn() {
                 color1={'#ffd700'}
                 color2={'#ffd700'}
               />
+
             </div>
           </div>
         </li>

@@ -1,9 +1,12 @@
 .login-signup-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+    
   }
+
   
   .login-button,
   .signup-button {
@@ -13,16 +16,27 @@
     border: none;
     margin: 0 10px;
     cursor: pointer;
+    margin-top: 3%;
+    
   }
   
   .login-button {
     background-color: #2196f3;
     color: white;
+    margin-top: 200%;
   }
   
-  .signup-button {
+  .signup-button {   
     background-color: white;
     color: #2196f3;
     border: 2px solid #2196f3;
   }
+
   
+  .additional-text {
+    margin-top: auto; /* Push the text to the bottom */
+    text-align: center;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+  }

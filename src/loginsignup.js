@@ -11,6 +11,8 @@ function LoginSignup() {
       <Link to="/signup">
         <button className="signup-button">Sign Up</button>
       </Link>
+
+      <p className="additional-text">Harshvardhan Devendra Pawar</p>
     </div>
   );
 }

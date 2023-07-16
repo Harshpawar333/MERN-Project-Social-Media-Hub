@@ -7,12 +7,14 @@ import './index.css'
 import Signup from './Signup'
 import Login from './Login'
 import LoggedIn from './LoggedIn';
-import Header from './Header'
+
 import LoginSignup from './loginsignup'
+import { ToastContainer } from "react-toastify";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    <ToastContainer/>
       <Routes>
         <Route exact path="/" element={<LoginSignup />} />
         <Route path="/login" element={<Login />} />
@@ -20,7 +22,7 @@ ReactDOM.render(
         <Route path="/LoggedIn" element={<LoggedIn />} />
       </Routes>
     </Router>
-    {<Header />}
+    
   </React.StrictMode>,
   document.getElementById('root'),
 )
