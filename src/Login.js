@@ -20,7 +20,7 @@ function Login() {
   }
 
   function handleLogin() {
-    axios.post("http://localhost:9002/login", { email, password })
+    axios.post("https://courageous-cuchufli-d8e5d4.netlify.app/login", { email, password })
     .then( res =>  {
       toast(res.data.message);
       if (res.data.message === "Login successful") {
