@@ -101,7 +101,7 @@ function Signup() {
       password === confirmPassword
     ) {
       const Signup = () => {
-        axios.post("http://localhost:9002/Signup", formData)
+        axios.post("https://mern-project-social-media-hub.onrender.com/Signup", formData)
         .then( res =>  {
           toast(res.data.message);
           if (res.data.message === "Successfully registered") {
